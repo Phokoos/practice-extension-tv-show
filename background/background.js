@@ -12,4 +12,10 @@ chrome.runtime.onInstalled.addListener((details) => {
 		})
 	})
 })
-console.log("back is run")
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+	console.log(message);
+	console.log(sender);
+	sendResponse("received message")
+	chrome.tabs.sendMessage(sender.tab.id, "Got your message, from back")
+})

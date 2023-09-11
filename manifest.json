@@ -19,6 +19,20 @@
 	"permissions": [
 		"contextMenus",
 		"search",
-		"tabs"
+		"tabs",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"css": [
+				"content/content.css"
+			],
+			"js": [
+				"content/content.js"
+			]
+		}
 	]
 }
