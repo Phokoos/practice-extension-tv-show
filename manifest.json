@@ -20,7 +20,8 @@
 		"contextMenus",
 		"search",
 		"tabs",
-		"storage"
+		"storage",
+		"tts"
 	],
 	"content_scripts": [
 		{
