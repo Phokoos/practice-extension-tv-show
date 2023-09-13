@@ -8,11 +8,16 @@ chrome.storage.local.set({
 	text
 })
 
-chrome.runtime.sendMessage(null, text, (res) => {
-	console.log("I`m from send res func: ", res);
-})
+chrome.runtime.sendMessage(null, text,
+	// (res) => { console.log("I`m from send res func: ", res); }
+)
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-	console.log(message);
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+	console.log(msg);
 	console.log(sender);
 })
+
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+// 	console.log(message);
+// 	console.log(sender);
+// })

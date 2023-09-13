@@ -16,6 +16,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	console.log(message);
 	console.log(sender);
-	sendResponse("received message")
+	// sendResponse("received message on back")
 	chrome.tabs.sendMessage(sender.tab.id, "Got your message, from back")
 })
+
